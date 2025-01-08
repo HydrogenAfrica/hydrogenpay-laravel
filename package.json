@@ -1,0 +1,35 @@
+{
+    "name": "hydrogenpay-laravel-docs",
+    "version": "0.0.1",
+    "description": "A Laravel package that makes it easy to use HydrogenPay APIs",
+    "main": "index.js",
+    "author": {
+      "name": "Lawal Yusuf",
+      "email": "bwitlawalyusuf@gmail.com"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/HydrogenAfrica/hydrogenpay-laravel"
+    },
+    "keywords": ["laravel", "hydrogen", "hydrogenpay", "vuepress", "documentation"],
+    "scripts": {
+      "dev": "vuepress dev docs",
+      "build": "vuepress build docs",
+      "clean": "rm -rf docs/.vuepress/dist",
+      "preview": "npx http-server docs/.vuepress/dist"
+    },
+    "license": "MIT",
+    "engines": {
+      "node": ">=14.0.0",
+      "npm": ">=6.0.0"
+    },
+    "homepage": "https://github.com/HydrogenAfrica/hydrogenpay-laravel#readme",
+    "bugs": {
+      "url": "https://github.com/HydrogenAfrica/hydrogenpay-laravel/issues"
+    },
+    "devDependencies": {
+      "vuepress": "^2.0.0",
+      "is-svg": "^4.3.1",
+      "ssri": "^9.0.1"
+    }
+  }

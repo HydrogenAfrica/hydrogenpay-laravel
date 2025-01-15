@@ -34,7 +34,7 @@ Key features:
 
 ```sh
 
-composer require hydrogenpay_laravel
+composer require hydrogenafrica/hydrogenpay-laravel
 
 ```
 

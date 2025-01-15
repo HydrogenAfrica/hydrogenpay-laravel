@@ -23,10 +23,10 @@ class HydrogenPayTest extends TestCase
     {
         parent::setUp();
 
-        // Mock configuration for HydrogenPay
+        // Mock configuration for HydrogenPay. Provide your key to run the test case.
         config([
-            'hydrogenpay.live_api_Key' => 'SK_LIVE_ad9614acf356f9c6d6b0dda5895aee33',
-            'hydrogenpay.sandbox_Key' => 'PK_TEST_cca53e0b3bc7847aff94502b8a585f84',
+            'hydrogenpay.live_api_Key' => 'SK_LIVE_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+            'hydrogenpay.sandbox_Key' => 'PK_TEST_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
             'hydrogenpay.mode' => 'TEST',
         ]);
 

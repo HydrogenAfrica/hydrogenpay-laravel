@@ -12,22 +12,20 @@
  */
 
 return [
+    /**
+     * Live API Key: Your Hydrogen live API key.
+     * Sign up on https://dashboard.hydrogenpay.com/signup to get one from your settings page.
+     */
+    'live_api_Key' => env('LIVE_API_KEY'),
 
     /**
-     * Public Key: Your Hydrogen publicKey. Sign up on https://dashboard.hydrogenpay.com/ to get one from your settings page
-     *
+     * Sandbox Key: Your Hydrogen sandbox API key.
+     * Sign up on https://dashboard.hydrogenpay.com/signup to get one from your settings page.
      */
-    'publicKey' => env('PUBLIC_KEY'),
+    'sandbox_Key' => env('SANDBOX_KEY'),
 
     /**
-     * Secret Key: Your Hydrogen secretKey. Sign up on https://dashboard.hydrogenpay.com/ to get one from your settings page
-     *
+     * Mode: Set to 'live' or 'test' to toggle between live and sandbox environments.
      */
-    'secretKey' => env('SECRET_KEY'),
-
-    /**
-     * Prefix: Secret hash for webhook
-     *
-     */
-    'secretHash' => env('SECRET_HASH', ''),
+    'mode' => env('MODE', 'test'),
 ];

@@ -15,7 +15,7 @@ class HydrogenServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $config = realpath(__DIR__.'/../resources/config/hydrogenpay.php');
+        $config = realpath(__DIR__ . '/../resources/config/hydrogenpay.php');
 
         $this->publishes([
             $config => config_path('hydrogenpay.php')
@@ -38,10 +38,10 @@ class HydrogenServiceProvider extends ServiceProvider
     }
 
     /**
-    * Get the services provided by the provider
-    *
-    * @return array
-    */
+     * Get the services provided by the provider
+     *
+     * @return array
+     */
     public function provides()
     {
         return ['hydrogenpay-laravel'];

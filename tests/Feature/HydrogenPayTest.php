@@ -30,6 +30,7 @@ class HydrogenPayTest extends TestCase
             'hydrogenpay.mode' => 'TEST',
         ]);
 
+        
         // Initialize Hydrogen instance
         $this->hydrogen = new Hydrogen();
         

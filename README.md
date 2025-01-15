@@ -77,7 +77,7 @@ php artisan vendor:publish --provider="HydrogenAfrica\Hydrogen\HydrogenServicePr
 
 A configuration-file named hydrogenpay.php will be placed in your config directory.
 
-Get your keys form [here](https://dashboard.hydrogenpay.com)
+Get your keys from [here](https://dashboard.hydrogenpay.com)
 
 Add the following environment variables to your .env file:
 
@@ -293,7 +293,7 @@ class HydrogenPayController extends Controller
 
 ## Testing
 
-All SDK tests are implemented using Laravel's ```unittest``` module. They currently cover:
+All SDK tests are implemented using Laravel's ```test``` module. They currently cover:
 
 ```sh
 
@@ -308,7 +308,6 @@ Running the Tests
     php artisan test --filter HydrogenPayTest
 
 
-// tests\Feature\HydrogenPayTest.php:37
 "Payment Initialization Response:" // tests\Feature\HydrogenPayTest.php:80
 array:3 [
   "statusCode" => "90000"

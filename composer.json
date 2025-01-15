@@ -26,6 +26,9 @@
         "php-coveralls/php-coveralls": "^2.0"
     },
     "autoload": {
+        "files": [
+            "src/Hydrogen.php"
+        ],
         "psr-4": {
             "HydrogenAfrica\\Hydrogen\\": "src/"
         }

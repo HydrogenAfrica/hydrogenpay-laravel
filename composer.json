@@ -27,7 +27,7 @@
     },
     "autoload": {
         "classmap": [
-            "hydrogenpay-laravel/src/Hydrogen.php"
+            "src/Hydrogen.php"
         ],
         "psr-4": {
             "HydrogenAfrica\\Hydrogen\\": "src/"

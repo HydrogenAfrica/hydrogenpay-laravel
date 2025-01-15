@@ -44,7 +44,7 @@ Add the following line to the require block of your composer.json file.
 
 ```sh
 
-"hydrogenafrica/hydrogenpay-laravel": "dev-main"
+"hydrogenafrica/hydrogenpay-laravel": "1.0.*"
 
 ```
 
@@ -82,8 +82,8 @@ Get your keys from [here](https://dashboard.hydrogenpay.com)
 Add the following environment variables to your .env file:
 
 ```sh
-LIVE_API_KEY=SK_LIVE_ad9614acf356f9c6d6b0dda5895aee33
-SANDBOX_KEY=PK_TEST_cca53e0b3bc7847aff94502b8a585f84
+LIVE_API_KEY=SK_LIVE_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+SANDBOX_KEY=PK_TEST_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 MODE=TEST
 ```
 - LIVE_API_KEY: Your HydrogenPay live API key obtained from the dashboard. (Required)
@@ -99,6 +99,12 @@ Set up routes, view and controller methods like so:
 
 ```php
 
+<?php
+
+use App\Http\Controllers\HydrogenPayController;
+use Illuminate\Support\Facades\Route;
+
+
 // The home page that displays the payment form
 Route::get('/', function () {
 return view('home');
@@ -112,7 +118,7 @@ Route::get('/trans/callback', [HydrogenPayController::class, 'handleCallback'])-
 
 ```
 
-## ```2. Setup the Payment Page(View)```
+## ```2. Setup the Payment Home Page(View)```
 
 ```php
 
@@ -134,7 +140,7 @@ Route::get('/trans/callback', [HydrogenPayController::class, 'handleCallback'])-
 
 ```
 
-## ```3. Setup your Controller```
+## ```3. Setup your Controller (HydrogenPayController)```
 
 ```php
 
@@ -291,19 +297,21 @@ class HydrogenPayController extends Controller
 
 ```
 
-## Testing
+## Running HydrogenPay Tests
 
-All SDK tests are implemented using Laravel's ```test``` module. They currently cover:
+All SDK tests are implemented using Laravel's testing module. To run these tests effectively, follow the steps below:
+
+Copy the ```HydrogenPayTest``` file from the SDK's tests folder to your Laravel application's tests/Feature folder:
 
 ```sh
 
 Running the Tests
 
-1. Run All Tests at Once
+1. Run All Tests at Once:
 
     php artisan test
 
-2. You can run each test file separately using the following command:
+2. Run the HydrogenPay Test Specifically:
 
     php artisan test --filter HydrogenPayTest
 
